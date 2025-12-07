@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download File</title>
+<style>
+body {
+  background: linear-gradient(135deg, #007bff, #6610f2);
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: center;
+}
+form h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+button {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #6610f2, #007bff);
+}
+select{
+    height: 40px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    color: blue;
+}
+select > option {
+    background-color: aliceblue;
+    height: 250px;
+    color: black;
+}
+</style>
+</head>
+<body>
+
+<form method="POST" action="download.php">
+  <h2>Download Your File</h2>
+  <select name="file"  required>
+    <option value=""> Select a File to Download</option>
+    <option value="blue-lock-movie.jpg">Blue Lock Movie</option>
+    <option value="couple-of-.jpg">Couple Of chahos</option>
+    <option value="deathnote.jpg">Death Note</option>
+    </select>
+  <button type="submit">Download</button>
+</form>
+
+</body>
+</html>

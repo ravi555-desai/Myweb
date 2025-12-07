@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      background-color: rgb(30, 29, 29);
+      color: whitesmoke;
+    }
+
+    @font-face {
+      font-family: monk;
+      src: url("./images/PocketMonk-15ze.ttf");
+    }
+
+    header {
+      display: flex;
+      font-family: monk;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 40%;
+      padding: 20px;
+      position: sticky;
+      background-color: rgb(30, 29, 29);
+    }
+
+    header>nav>ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+      margin-left: 90%;
+      font-size: 20px;
+    }
+
+    header>nav>ul>li:hover {
+      cursor: pointer;
+      color: red;
+      transform: scale(1.2);
+    }
+
+    li a:hover {
+      color: red;
+    }
+
+    header>h3 {
+      position: relative;
+      top: 0px;
+      left: 75px;
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+
+      cursor: pointer;
+    }
+
+    .container {
+      margin-top: 10%;
+      font-family: monk;
+    }
+
+    #bm {
+      font-size: 45px;
+      margin-left: 5%;
+    }
+
+    #dt {
+      font-size: 16px;
+      margin-left: 5%;
+      color: gray;
+    }
+
+    button {
+      height: 10%;
+      margin-left: 5%;
+      font-family: monk;
+      width: 10%;
+      background-color: rgb(237, 27, 27);
+      border: 2px solid wheat;
+      border-radius: 0px 40px;
+      color: wheat;
+    }
+
+    #akt {
+      margin-top: -50%;
+      margin-left: 60%;
+      height: 50%;
+      width: 30%;
+    }
+
+    #tobi {
+      margin-top: -36%;
+      margin-left: 60%;
+      height: 30rem;
+    }
+
+    #pain {
+      margin-top: -45%;
+      margin-left: 50%;
+      height: 30rem;
+    }
+
+    .grid {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8%;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .item>img {
+      height: 120px;
+    }
+
+    .grid2 {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 10px 20px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .item2 a img {
+      height: 220px;
+      width: 198px;
+      margin-top: 0px;
+      border: 2px solid black;
+    }
+
+    .item2 {
+      border: 2px solid white;
+      height: 280px;
+      width: 200px;
+      margin-left: 20px;
+      box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s;
+      background-color: whitesmoke;
+      color: black;
+      border: 2px solid black;
+      text-align: center;
+    }
+
+    .item2 p {
+      font-size: 20px;
+      margin-top: 2%;
+      color: black;
+      font-family: monk;
+    }
+
+    .item2:hover {
+      transform: scale(1.1);
+      cursor: pointer;
+    }
+
+    #mp {
+      font-size: 24px;
+      margin-left: 40px;
+      margin-top: 5%;
+    }
+
+    footer p {
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 1024px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      header>nav>ul {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .container {
+        text-align: center;
+        margin-top: 15%;
+      }
+
+      #bm {
+        font-size: 36px;
+        margin-left: 0;
+      }
+
+      #dt {
+        margin-left: 0;
+        font-size: 14px;
+      }
+
+      button {
+        width: 60%;
+        margin-left: 0;
+      }
+
+      #akt,
+      #tobi,
+      #pain {
+        margin: 20px auto;
+        display: block;
+        height: auto;
+        width: 70%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header>nav>ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #bm {
+        font-size: 30px;
+      }
+
+      #dt {
+        font-size: 14px;
+      }
+
+      .grid {
+        gap: 20px;
+      }
+
+      .item2 {
+        width: 160px;
+        height: 240px;
+      }
+
+      .item2 a img {
+        width: 150px;
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header>nav>ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      #bm {
+        font-size: 30px;
+      }
+
+      #dt {
+        font-size: 14px;
+      }
+
+      .grid {
+        gap: 20px;
+      }
+
+      .item2 {
+        width: 160px;
+        height: 240px;
+      }
+
+      .item2 a img {
+        width: 150px;
+        height: 180px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h3 {
+        font-size: 18px;
+      }
+
+      #bm {
+        font-size: 24px;
+      }
+
+      button {
+        width: 80%;
+      }
+
+      .grid {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .grid2 {
+        gap: 10px;
+        padding: 10px;
+      }
+
+      .item2 {
+        width: 140px;
+        height: 210px;
+      }
+
+      .item2 a img {
+        width: 130px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h3>Ani Watcher</h3>
+    <nav>
+      <ul>
+        <li><a href=".#">Home</a></li>
+        <li><a href=".#">Index</a></li>
+        <li><a href="#">About_us</a></li>
+          <li><a href="./find&dwl.html">Download</a></li>
+            <li><a href="./login.html">Login</a></li>
+              <li><a href="./admin.html">Admin</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <p id="bm">
+        BEST ANIME & <br />
+        MANGA STREAMING <br />
+        PLATFORM
+      </p>
+      <p id="dt">
+        All Your Favorite Anime & Manga In One Place.
+        <br>Watch Trending Manga's & Anime. <br>
+        Discover The World of Anime And Manga Like Never Before! <br>
+        Read reviews, explore Character bios and Dive Into story arcs.
+      </p>
+      <br />
+      <button>START FREE <br> TRIAL</button>
+    </div>
+    <img src="./images/pngwing.com.png" alt="pngwing" id="akt" />
+    <img src="./images/pngwing.com (1).png" alt="pngwing" id="tobi" />
+    <img src="./images/pngwing.com (2).png" alt="pngwing" id="pain" />
+  </main>
+  <div class="grid">
+    <div class="item">
+      <img src="./images/ani0.png" />
+    </div>
+    <div class="item">
+      <img src="./images/ani2.png" />
+    </div>
+    <div class="item">
+      <img src="./images/ani3.png" />
+    </div>
+    <div class="item">
+      <img src="./images/ani7.png" />
+    </div>
+  </div>
+  <p id="mp">Most Popular</p>
+  <div class="grid2">
+    <div class="item2">
+      <a href="./"> <img src="./images/deathnote.jpg" />
+      </a>
+      <p>Death Note <br />2006</p>
+    </div>
+    <div class="item2">
+      </a><a href="./"> <img src="./images/demonslayer.jpg" />
+        <p>Demon Slayer <br> kimetsu no Yahiba</p>
+    </div>
+    <div class="item2">
+      </a><a href="./"> <img src="./images/naruto.jpg" />
+        <p>Naruto Shipudan</p>
+    </div>
+    <div class="item2">
+      </a><a href="./"> <img src="./images/jujutsu.jpg" />
+        <p>Jujutsu Kaisen</p>
+    </div>
+    <div class="item2">
+      </a><a href="./"> <img src="./images/bleach.jpg" />
+        <p>Bleach : Thousand-year Blood War</p>
+    </div>
+    <div class="item2">
+      </a><a href="./"> <img src="./images/sakamoto.jpg" />
+        <p>sakamoto Days</p>
+    </div>
+    <div class="item2">
+      <a href="./"><img src="./images/sololveling.jpg" /></a>
+      <p>Solo Leveling</p>
+    </div>
+    <br />
+  </div>
+  <p id="mp">Also like</p>
+  <div class="grid2">
+    <div class="item2">
+      </a><a href="./"> <img src="./images/dressup.jpg" />
+        <p>My Dress-Up <br> Darling</p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/hunterx.jpg" />
+        <p>Hunter x Hunter</p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/takopi.jpg" />
+        <p>Takopi's Original <br>Sin</p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/couple-of-.jpg" />
+        <p>A Couple of <br>Cuckoos</p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/gachiakuta.jpg" />
+        <p>Gachiakuta </p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/lord-of-mystry.jpg" />
+        <p>Lord of Mysteries</p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/kaizu.jpg" />
+        <p>Kaiju No. 8</p>
+    </div>
+
+    <div class="item2">
+      </a><a href="./"> <img src="./images/sakamoto.jpg" />
+        <p>Sakamoto Days</p>
+    </div>
+    <br />
+  </div>
+  <p id="mp">Movies you like</p>
+  <div class="grid2">
+    <div class="item2">
+      <a href="./"> <img src="./images/your-name.jpg" />
+        <p>Your Name</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/i-want-to-eat.jpg" />
+        <p>I want To Eat Your <br> Pancreas</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/maskman.jpg" />
+        <p>Into The Forest of <br> Firefly Light </p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/demon-slayer-movie.jpg" />
+        <p>Demon Slayer Infinity Castle</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/nezha.jpg" />
+        <p>NeZha 2</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/mha-movie.jpg" />
+        <p>My Hero Academia: <br> You're Next</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/blue-lock-movie.jpg" />
+        <p>Blue Lock The Movie <br> Episode Nagi</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/naruto-road-to.jpg" />
+        <p style="font-size: 15px;">Naruto The Movie : <br> Ninja Class In The Land Of Snow</p>
+      </a>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/Lst-in-star.jpg" />
+        <p>Lost In Starlight</p>
+      </a>
+    </div>
+  </div>
+  <p id="mp">Popular Manga's</p>
+  <div class="grid2">
+    <div class="item2">
+      <a href="./"><img src="./images/lookism.jpg" /> </a>
+      <p>LOOKISM</p>
+    </div>
+    <div class="item2">
+      <a href="./"><img src="./images/viral-hit.jpg" /> </a>
+      <p>VIRAL HIT</p>
+    </div>
+    <div class="item2">
+      <a href="./"> <img src="./images/manager-kim.jpg" /> </a>
+      <p>MANAGER KIM</p>
+    </div>
+    <div class="item2">
+      <a href="./"><img src="./images/world-after.jpg" /></a>
+      <p style="font-size: 17PX;">THE WORLD AFTER THE <br>FALL</p>
+    </div>
+    <div class="item2">
+      <a href="./"><img src="./images/omniscient.jpg" /> </a>
+      <p>OMNISCIENT <BR> READER</p>
+    </div>
+    <div class="item2">
+      <a href="./"><img src="./images/unordinary.jpg" /> </a>
+      <P>Un-ORDINARY</P>
+    </div>
+    <div class="item2">
+      <a href="./"><img src="./images/TM-Key-Art.png" /> </a>
+      <P>TEENAGE <BR>MERCENARY</P>
+    </div>
+  </div>
+  <hr />
+  <footer>
+    <p>Copyright @ Anime 2025</p>
+  </footer>
+</body>
+</html>

